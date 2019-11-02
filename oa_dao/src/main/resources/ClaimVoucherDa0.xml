@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.imooc.oa.dao.ClaimVoucherDao">
+    <resultMap id="claimVoucher" type="CliamVoucher">
+        <id property="id" column="id" javaType="Integer"/>
+        <result property="cause" column="cause" javaType="String"/>
+        <result property="createSn" column="create_sn" javaType="String"/>
+        <result property="createTime" column="create_time" javaType="java.util.Date"/>
+        <result property="nextDealSn" column="next_deal_sn" javaType="String"/>
+        <result property="totalAmount" column="total_amount" javaType="double"/>
+        <result property="status" column="status" javaType="String"/>
+        <association property="creater" column="create_sn" javaType="Employee">
+            <result property="name" column="name" javaType="String"/>
+            <result property="post" column="post" javaType="String"/>
+        </association>
+        <association property="dealer" column="next_deal_sn" javaType="Employee">
+            <result property="name" column="name" javaType="String"/>
+            <result property="post" column="post" javaType="String"/>
+        </association>
+    </resultMap>
 </mapper>

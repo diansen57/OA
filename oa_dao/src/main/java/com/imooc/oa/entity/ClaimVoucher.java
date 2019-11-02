@@ -8,9 +8,9 @@ import java.util.Date;
 public class ClaimVoucher {
     private Integer id;
 
-    private String cause;
+    private String cause;//事由
 
-    private String createSn;
+    private String createSn;//创建人
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm")
     private Date createTime;
 
