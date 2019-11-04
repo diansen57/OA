@@ -18,4 +18,42 @@
             <result property="post" column="post" javaType="String"/>
         </association>
     </resultMap>
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="ClaimVoucher">
+        insert into claim_voucher (cause,create_sn,create_time,next_deal_sn,total_amount,status)
+        values (#{cause},#{createSn},#{createTime},#{nextDealSn},#{totalAmount},#{status})
+    </insert>
+
+    <update id="update" parameterType="ClaimVoucher">
+        update claim_voucher set cause=#{cause},next_deal_sn=#{nextDealSn},total_amount=#{totalAmount},status=#{status}
+        where id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="Integer">
+        delete from claim_voucher where id=#{id}
+    </delete>
+
+    <select id="select" parameterType="Integer" resultMap="claimVoucher">
+        select cv.*,ce.name cname,ce.post cpost,d.name dname,d.post dpost
+        from claim_voucher cv
+        left join employee ce on ce.sn=cv.create_sn
+        left join employee d on d.sn=d.next_deal_sn
+        where cv.id=#{id}
+    </select>
+
+    <select id="selectByCreateSn" resultMap="claimVoucher" parameterType="String">
+        select cv.*,ce.name cname,ce.post cpost,d.name dname,d.post dpost
+        from claim_voucher cv
+        left join employee ce on ce.sn=cv.create_sn
+        left join employee d on d.sn=d.next_deal_sn
+        where cv.create_sn=#{csn} order by cv.create_time desc
+    </select>
+
+    <select id="selectNextDealSn" resultMap="claimVoucher" parameterType="String">
+        select cv.*,ce.name cname,ce.post cpost,d.name dname,d.post dpost
+        from claim_voucher cv
+        left join employee ce on ce.sn=cv.create_sn
+        left join employee d on d.sn=d.next_deal_sn
+        where cv.next_deal_sn=#{ndsn} order by cv.create_time desc
+    </select>
 </mapper>
