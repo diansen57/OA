@@ -29,4 +29,9 @@
             <tx:method name="*" propagation="REQUIRED"/>
         </tx:attributes>
     </tx:advice>
+    
+    <aop:config>
+        <aop:pointcut id="txpc" expression="execution(* com.imooc.oa.biz.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txpc"/>
+    </aop:config>
 </beans>

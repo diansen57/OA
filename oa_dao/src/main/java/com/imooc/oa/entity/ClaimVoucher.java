@@ -68,7 +68,7 @@ public class ClaimVoucher {
         this.totalAmount = totalAmount;
     }
 
-    public String getStatus() {
+    public String getStatus(String claimvoucherCreate) {
         return status;
     }
 
