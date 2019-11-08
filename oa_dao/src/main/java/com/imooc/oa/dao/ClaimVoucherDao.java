@@ -4,6 +4,9 @@ import com.imooc.oa.entity.ClaimVoucher;
 
 import java.util.List;
 
+/**
+ * @author Administrator
+ */
 public interface ClaimVoucherDao {
     void save(ClaimVoucher claimVoucher);
 

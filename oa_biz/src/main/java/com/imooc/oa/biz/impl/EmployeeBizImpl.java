@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@SuppressWarnings("AlibabaClassMustHaveAuthor")
 @Service("employeeBiz")
 public class EmployeeBizImpl implements EmployeeBiz {
     @Autowired

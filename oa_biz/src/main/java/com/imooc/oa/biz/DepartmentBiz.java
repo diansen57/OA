@@ -5,6 +5,7 @@ import com.imooc.oa.entity.Employee;
 
 import java.util.List;
 
+@SuppressWarnings("AlibabaClassMustHaveAuthor")
 public interface DepartmentBiz {
     void save(Department department);
 

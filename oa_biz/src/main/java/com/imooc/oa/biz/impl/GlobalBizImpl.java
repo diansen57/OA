@@ -6,6 +6,10 @@ import com.imooc.oa.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Administrator
+ */
+@SuppressWarnings("AlibabaClassMustHaveAuthor")
 @Service("globalBiz")
 public class GlobalBizImpl implements GlobalBiz {
     @Autowired

@@ -4,13 +4,23 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-//报销单
+
+/**
+ * @author Administrator
+ * 报销单
+ */
 public class ClaimVoucher {
     private Integer id;
 
-    private String cause;//事由
+    /**
+     * 事由
+     */
+    private String cause;
 
-    private String createSn;//创建人
+    /**
+     * 创建人
+     */
+    private String createSn;
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm")
     private Date createTime;
 

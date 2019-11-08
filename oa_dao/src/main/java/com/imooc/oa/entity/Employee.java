@@ -1,5 +1,6 @@
 package com.imooc.oa.entity;
 
+@SuppressWarnings("AlibabaClassMustHaveAuthor")
 public class Employee {
     private String sn;
     private String password;

@@ -1,5 +1,8 @@
 package com.imooc.oa.entity;
 
+/**
+ * @author Administrator
+ */
 public class ClaimVoucherItem {
     private Integer id;
 

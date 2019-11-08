@@ -4,6 +4,10 @@ import com.imooc.oa.entity.ClaimVoucherItem;
 
 import java.util.List;
 
+/**
+ * @author Administrator
+ */
+@SuppressWarnings("AlibabaClassMustHaveAuthor")
 public interface ClaimVoucherItemDao {
     void save(ClaimVoucherItem claimVoucherItem);
 

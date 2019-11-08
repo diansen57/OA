@@ -5,6 +5,10 @@ import org.apache.ibatis.annotations.Param;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Administrator
+ */
+@SuppressWarnings("AlibabaClassMustHaveAuthor")
 public class Contanct {
 
     public final static String POST_STAFF = "员工";
@@ -35,7 +39,9 @@ public class Contanct {
         return list;
     }
 
-    //报销单状态
+    /**
+     * 报销单状态
+     */
     public final static String CLAIMVOUCHER_CREATE = "新创建";
     public final static String CLAIMVOUCHER_SUBMIT = "已提交";
     public final static String CLAIMVOUCHER_APPROVED = "已审核";
@@ -47,7 +53,9 @@ public class Contanct {
 
     public static final double LIMIT_CHECK = 5000.00;
 
-    //处理方式
+    /**
+     * 处理方式
+     */
     public static final String DEAL_CREATE = "创建";
     public final static String DEAL_SUBMIT = "提交";
     public final static String DEAL_UPDATE = "修改";

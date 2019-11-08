@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@SuppressWarnings("AlibabaClassMustHaveAuthor")
 @Repository("DepartmentDao")
 public interface DepartmentDao {
     void save(Department department);

@@ -4,12 +4,18 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
+/**
+ * @author Administrator
+ */
 public class DealRecord {
     private Integer id;
 
     private Integer claimVoucherId;
 
-    private String dealSn;//处理人
+    /**
+     * 处理人
+     */
+    private String dealSn;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm")
     private Date dealTime;
