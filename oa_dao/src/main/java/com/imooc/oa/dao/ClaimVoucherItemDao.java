@@ -1,6 +1,7 @@
 package com.imooc.oa.dao;
 
 import com.imooc.oa.entity.ClaimVoucherItem;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -8,6 +9,7 @@ import java.util.List;
  * @author Administrator
  */
 @SuppressWarnings("AlibabaClassMustHaveAuthor")
+@Repository("claimVoucherItemDao")
 public interface ClaimVoucherItemDao {
     void save(ClaimVoucherItem claimVoucherItem);
 

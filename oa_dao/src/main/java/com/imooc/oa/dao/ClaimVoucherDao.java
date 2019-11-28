@@ -1,12 +1,14 @@
 package com.imooc.oa.dao;
 
 import com.imooc.oa.entity.ClaimVoucher;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * @author Administrator
  */
+@Repository("claimVoucherDao")
 public interface ClaimVoucherDao {
     void save(ClaimVoucher claimVoucher);
 
